@@ -1,0 +1,625 @@
+<html dir="ltr"><head><style type="text/css">
+
+h1, h2, h3, h4, h5, p {
+  /*font-size: 100% !important;*/
+}
+.form-group{
+  /*background:#f9fbfc;*/
+  padding: 12px;
+}
+
+.login_error{
+  background: #991d00;
+  color: white;
+  font-size: 60%;
+  height: 40px;
+  padding: 5px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+
+</style>
+
+
+
+    <meta name="google-site-verification" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/favicon.png">
+<meta name="theme-color" content="#0000">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Qfs-firm.com">
+<meta property="og:image" content="https://qfs-firm.com/img/logo.jpg">
+<meta name="description" content="Qfs-firm.com">
+<meta name="keywords" content="Token and Staking Platform">
+    <!-- Vendors Style-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+   
+    <!-- Icons -->
+ <!--    <link rel="stylesheet" href="fonts/fonts.css" /> <link rel="stylesheet" href="fonts/icons-alipay.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" /> -->
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="192x192" href="app/icons/icon-192x192.png">
+
+    <!-- new UI--->
+
+  <!-- iconsax css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconsax.css">
+
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.min.css">
+
+  <!-- swiper css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/vendors/swiper-bundle.min.css">
+
+  <!-- Theme css -->
+  <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript" charset="utf-8" async="" src="https://www.smartsuppchat.com/loader.js?"></script><script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '2924ddeb399034af673a7042631ae2c70526ef26';
+window.smartsupp||(function(d) {
+	var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	c.type='text/javascript';c.charset='utf-8';c.async=true;
+	c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+
+
+
+<style type="text/css">
+.bg-grey {
+    background: #c8c7c7 !important; color: black;
+}
+</style></head>
+
+
+
+
+
+<body>
+
+  <!-- side bar start -->
+  <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+    <div class="offcanvas-header sidebar-header">
+      <div class="sidebar-logo">
+        <img class="img-fluid logo" style="width:20%" src="img/logo.png" alt="logo">
+      </div>
+      <div class="balance">
+        <img class="img-fluid balance-bg" src="assets/images/background/auth-bg.jpg" alt="auth-bg">
+        <h5>Balance</h5>
+        <h2>$0</h2>
+      </div>
+    </div>
+    <div class="offcanvas-body">
+      <div class="sidebar-content">
+        <ul class="link-section">
+          <li>
+            <a href="./" class="pages">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card sidebar-icon"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              <h3>Dashboard</h3>
+            </a>
+          </li>
+          <li>
+            <a href="deposit" class="pages">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign sidebar-icon"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <h3>Send</h3>
+            </a>
+          </li>
+          <li>
+            <a href="withdraw" class="pages">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text sidebar-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <h3>Receive</h3>
+            </a>
+          </li>
+          <li>
+            <a href="swap" class="pages">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-command sidebar-icon"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+              <h3>Swap</h3>
+            </a>
+          </li>
+          <!--
+<li>
+            <a href="referrals" class="pages">
+              <i class="sidebar-icon" data-feather="dollar-sign"></i>
+              <h3>Referrals</h3>
+            </a>
+          </li>
+         -->
+         
+          <li>
+            <a href="myprofile" class="pages">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user sidebar-icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <h3>Profile</h3>
+            </a>
+          </li>
+
+          <li>
+            <a href="logout" class="pages">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out sidebar-icon"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+              <h3>Log out</h3>
+            </a>
+          </li>
+        </ul>
+        <div class="mode-switch">
+          <ul class="switch-section">
+          
+            <li>
+              <h3>Dark</h3>
+              <div class="switch-btn">
+                <input id="dark-switch" type="checkbox">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- side bar end -->
+
+
+
+   
+      <title>Select Asset | Magixx</title>
+
+  <!-- header start -->
+  <header class="section-t-space">
+    <div class="custom-container">
+      <div class="header-panel">
+        <a class="sidebar-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu menu-icon"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </a>
+        <h2><a href="/account" class="notification">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left notification-icon"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </a></h2>
+      </div>
+    </div>
+  </header><br>
+  
+  <!-- header end -->
+    <!-- Buy & Sell history section starts -->
+  <section>
+    <div class="custom-container">
+       
+
+      <div class="row gy-3">
+  
+  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=6" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/stellar-xlm-logo.png?v=026" alt="Stella">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Stella</h5>
+                   <h3 class="dark-text">0.00 
+XLM
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:green">
+
+                  4.20%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=7" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/xrp-xrp-logo.png?v=026" alt="Ripple">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Ripple</h5>
+                   <h3 class="dark-text">0.00 
+XRP
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:red">
+
+                  -0.05%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=8" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=026" alt="Bitcoin">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Bitcoin</h5>
+                   <h3 class="dark-text">0.00 
+BTC
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:red">
+
+                  -1.80%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=9" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=026" alt="Ethereum">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Ethereum</h5>
+                   <h3 class="dark-text">0.00 
+ETH
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:red">
+
+                  -2.68%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=10" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/litecoin-ltc-logo.png?v=026" alt="Litecoin">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Litecoin</h5>
+                   <h3 class="dark-text">0.00 
+LTC
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:green">
+
+                  0.93%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=11" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=026" alt="Usdt">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Usdt</h5>
+                   <h3 class="dark-text">0.00 
+USDT
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:red">
+
+                  -2.53%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=12" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/tron-trx-logo.png?v=026" alt="Tron">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Tron</h5>
+                   <h3 class="dark-text">0.00 
+TRX
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:red">
+
+                  -4.59%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=13" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/solana-sol-logo.png?v=026" alt="Solana">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Solana</h5>
+                   <h3 class="dark-text">0.00 
+SOL
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:red">
+
+                  -2.77%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=14" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/bnb-bnb-logo.png?v=026" alt="Smart Chain">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Smart Chain</h5>
+                   <h3 class="dark-text">0.00 
+BNB
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:green">
+
+                  2.75%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=15" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/cardano-ada-logo.png?v=026" alt="Cardano">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Cardano</h5>
+                   <h3 class="dark-text">0.00 
+ADA
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:green">
+
+                  0.36%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=16" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=026" alt="Doge">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Doge</h5>
+                   <h3 class="dark-text">0.00 
+DOGE
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:red">
+
+                  -1.92%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                  
+  
+      <div class="col-12">
+          <div class="transaction-box">
+            <a href="de?id=17" class="d-flex gap-3">
+              <div class="transaction-image color2">
+                <img class="img-fluid icon" src="https://cryptologos.cc/logos/polygon-matic-logo.png?v=026" alt="Matic">
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">
+                  <h5>Matic</h5>
+                   <h3 class="dark-text">0.00 
+MATIC
+</h3> 
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h5 classx="light-text" style="color:green">
+
+                  0.10%                  </h5>
+                  <h5 class="success-color"> <span class="light-text">$0.00</span></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+                         
+         </div>
+     </div>
+ </section>
+ 
+    
+
+
+
+
+
+
+<title>Qfs-firm.com</title>
+
+
+<script type="text/javascript">
+function copyText (element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+document.getElementById('copytext').innerHTML='<i style="color:green">Copied</i>';
+}
+</script>
+
+
+
+
+
+
+<!-- 
+
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="javascript/swiper.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script> -->
+
+
+
+  <!-- panel-space start -->
+
+  <section class="panel-space"></section>
+  <!-- panel-space end -->
+
+  <!-- bottom navbar start -->
+ 
+  <div class="navbar-menu">
+    <div class="scanner-bg">
+      <a href="link_wallets" class="scanner-btn">
+        <img class="img-fluid" src="assets/images/svg/scan.svg" alt="scan">
+      </a>
+    </div>
+
+    <ul>
+      <li class="1active">
+        <a href="./">
+          <div class="icon">
+            <img class="unactive" src="assets/images/svg/mpay.svg" alt="mPay">
+            <img class="active" src="assets/images/svg/mpay-fill.svg" alt="mPay">
+          </div>
+          <h5>Dashboard</h5>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.moonpay.com/buy">
+          <div class="icon">
+            <img class="unactive" src="assets/images/svg/bitcoin.svg" alt="categories">
+            <img class="active" src="assets/images/svg/bitcoin-fill.svg" alt="categories">
+          </div>
+          <h5>Buy</h5>
+        </a>
+      </li>
+
+      <li></li>
+
+      <li>
+        <a href="debit-card">
+          <div class="icon">
+            <img class="unactive" src="assets/images/svg/bar-chart.svg" alt="bag">
+            <img class="active" src="assets/images/svg/bar-chart-fill.svg" alt="bag">
+          </div>
+          <h5>Debit Card</h5>
+        </a>
+      </li>
+
+      <li>
+        <a href="myprofile">
+          <div class="icon">
+            <img class="unactive" src="assets/images/svg/user.svg" alt="profile">
+            <img class="active" src="assets/images/svg/user-fill.svg" alt="profile">
+          </div>
+          <h5>Profile</h5>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- bottom navbar end -->
+  
+  <!-- pwa install app popup start -->
+
+  <!-- swiper js -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/custom-swiper.js"></script>
+
+  <!-- feather js -->
+  <script src="assets/js/feather.min.js"></script>
+  <script src="assets/js/custom-feather.js"></script>
+
+  <!-- iconsax js -->
+  <script src="assets/js/iconsax.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  
+  <!-- PWA offcanvas popup js -->
+  <script src="assets/js/offcanvas-popup.js"></script>
+
+  <!-- script js -->
+  <script src="assets/js/script.js"></script>
+
+
+    
+
+<title>Qfs-firm.com</title><iframe id="chat-application-iframe" title="Smartsupp" aria-hidden="true" style="display: block; position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; opacity: 0; border: none; z-index: -1; pointer-events: none;"></iframe><div id="smartsupp-widget-container">  <div style="border-radius: 9999px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 2px 32px; height: 56px; position: fixed; bottom: 24px; left: initial; right: 12px; z-index: 10000000; width: 109px;" data-testid="widgetButtonFrame"><iframe id="widgetButtonFrame" title="Smartsupp widget button" style="position: absolute; width: 100%; height: 100%; border: none; display: block; text-align: left; margin: 0px; padding: 0px; top: 0px; left: 0px; opacity: 1;" allowfullscreen="" scrolling="no"></iframe></div>  </div></body></html>
