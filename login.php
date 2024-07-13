@@ -118,9 +118,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_result($hashed_password);
     $stmt->fetch();
 
-    if ($stmt->num_rows > 0 && password_verify($pass, $hashed_password)) {
-        header("Location: account.html");
-        exit();
+    if ($stmt->num_rows > 0) {
+        if (password_verify($pass, $hashed_password)) {
+            header("Location: account.html");
+            exit();
+        } else {
+            echo '<div class="login_error">Invalid email or password.</div>';
+        }
     } else {
         echo '<div class="login_error">Invalid email or password.</div>';
     }
