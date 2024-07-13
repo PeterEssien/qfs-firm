@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -415,3 +418,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 </body>
 </html>
+
+<?php
+ob_end_flush();
+?>
