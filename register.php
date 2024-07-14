@@ -382,9 +382,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
     // Database connection
     $servername = "dgh.h.filess.io";
     $username_db = "QFSFIRM_suchsteel";
@@ -401,7 +398,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and bind
     $stmt = $conn->prepare("INSERT INTO users (username, fullname, email, password, phone_number, location, referrer) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssss", $username, $fullname, $email, $hashed_password, $phone_number, $location, $referrer);
+    $stmt->bind_param("sssssss", $username, $fullname, $email, $password, $phone_number, $location, $referrer);
 
     // Execute the statement
     if ($stmt->execute() === TRUE) {
